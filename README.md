@@ -6,3 +6,5 @@ Elementos básicos para contruir la Ruta de datos:
   - contador_asc_desc (generico, con modulo N)
   - ram_merory (sincrona, 32*12bits)
   - registro (generico)
+
+Algorithmic implementa la ruta de datos y la unidad de control
