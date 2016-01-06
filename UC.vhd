@@ -112,6 +112,7 @@ case ESTADO is
 		ld_n <= '1';
 		ld_acumulador <= '1';
 		rst_error <= '1';
+		rst_y <= '1';
 	
 	when ESPERAR =>
 		if(iterador_equ = '1') then
@@ -119,8 +120,6 @@ case ESTADO is
 		else
 			ESTADO_SIGUIENTE <= ACTUALIZAR;
 		end if;
-		
-		ld_y <= '1';
 	
 	when ACTUALIZAR =>
 		ESTADO_SIGUIENTE <= ESPERAR;
@@ -128,6 +127,9 @@ case ESTADO is
 		ld_acumulador <= '1';
 		mux_acu <= '1';
 		ce <= '1';
+		up_ndn <= '1';
+		ld_y <= '1';
+		op <= '1';
 	
 	when ERROR =>
 		ESTADO_SIGUIENTE <= INICIAR;

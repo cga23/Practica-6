@@ -217,6 +217,6 @@ registro_error: registro
 				
 --comprobacion de las señales x y n con 0
 error_0 <= '1' when x = "0000000000000000" or n = "00000" else '0';
-iterador_equ <= '1' when iter_dir = modulo else '0';
+iterador_equ <= '1' when iter_dir = std_logic_vector(unsigned(modulo) - 1)  else '0';
 
 end Behavioral;
