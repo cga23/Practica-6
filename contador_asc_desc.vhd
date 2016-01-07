@@ -30,7 +30,7 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity contador_asc_desc is
-	generic(N: integer := 3);
+	generic(N: integer);
 	port(
 		  clk: in std_logic;
 		  reset: in std_logic;

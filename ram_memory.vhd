@@ -60,4 +60,3 @@ begin
 	end if;
 end process memory_update;
 end Behavioral;
-

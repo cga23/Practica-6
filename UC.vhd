@@ -115,14 +115,14 @@ case ESTADO is
 		rst_y <= '1';
 	
 	when ESPERAR =>
+		ESTADO_SIGUIENTE <= ACTUALIZAR;
+	
+	when ACTUALIZAR =>
 		if(iterador_equ = '1') then
 			ESTADO_SIGUIENTE <= INICIAR;
 		else
-			ESTADO_SIGUIENTE <= ACTUALIZAR;
+			ESTADO_SIGUIENTE <= ESPERAR;
 		end if;
-	
-	when ACTUALIZAR =>
-		ESTADO_SIGUIENTE <= ESPERAR;
 		
 		ld_acumulador <= '1';
 		mux_acu <= '1';
